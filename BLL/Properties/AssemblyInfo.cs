@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("BLL")]
-[assembly: AssemblyDescription("推出网建站系统")]
+[assembly: AssemblyDescription("企业站")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("推出网 tuichu.net")]
+[assembly: AssemblyCompany("企业站")]
 [assembly: AssemblyProduct("Model")]
-[assembly: AssemblyCopyright("Copyright © tuichu.net 2013")]
+[assembly: AssemblyCopyright("Copyright © yinshanfupya.com 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

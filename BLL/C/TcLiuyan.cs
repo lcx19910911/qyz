@@ -1,12 +1,4 @@
-﻿/** 
-* Copyright (c) 2013-2020 Tuichu.net. All rights reserved.
-*┌──────────────────────────────────┐
-*│  作者QQ:599906561  email: 599906561@qq.com
-*│  QQ群： 2068911
-*│　版权所有：推出网版权所有 http://www.tuichu.net　
-*└──────────────────────────────────┘
-*/
-using System; 
+﻿using System; 
 using System.Text;
 using System.Collections.Generic; 
 using System.Data;

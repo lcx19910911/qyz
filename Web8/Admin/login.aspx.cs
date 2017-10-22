@@ -14,11 +14,6 @@ namespace Tc.Web.Admin
         {
             if (!IsPostBack)
             {
-//#if DEBUG
-//                txt_name.Text = "admin";
-//                txt_pwd.Text = "tuichu";
-//                Button1_Click(sender, e);
-//#endif
             }
         }
 
