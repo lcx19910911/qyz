@@ -44,6 +44,13 @@ namespace Tc
 
         #endregion 当前登陆的管理员
 
+        private void SetLogin(string id)
+        {
+            this.Page.Session["admin"] = id;
+        }
+
+
+
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);

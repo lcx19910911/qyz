@@ -14,11 +14,11 @@ namespace Tc.Web.Admin
         {
             if (!IsPostBack)
             {
-#if DEBUG
-                txt_name.Text = "admin";
-                txt_pwd.Text = "tuichu";
-                Button1_Click(sender, e);
-#endif
+//#if DEBUG
+//                txt_name.Text = "admin";
+//                txt_pwd.Text = "tuichu";
+//                Button1_Click(sender, e);
+//#endif
             }
         }
 
@@ -39,10 +39,7 @@ namespace Tc.Web.Admin
                     if (t[0].Pwd.GetString().ToLower() == pwd.ToLower())
                     {
                         Session[LibAdmin.Session_admin] = t[0];
-
-                        Random r = new Random();
-                        string s = DateTime.Now.ToLongTimeString() + r.Next(1000000);
-                        FormsAuthentication.SetAuthCookie("admin" + s, false);
+                        
                         Response.Redirect("main.aspx");
                     }
 

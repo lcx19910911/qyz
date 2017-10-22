@@ -7,7 +7,7 @@ namespace Tc
 {
     public class LibAdmin
     {
-        public static string Session_admin = "TcAdmin";
+        public static string Session_admin = "admin";
 
         /// <summary>
         /// 获取当前登陆的
@@ -15,11 +15,8 @@ namespace Tc
         /// <returns></returns>
         public static Model.TcAdmin GetCurrentAdmin()
         {
-            //开发方便，默认写上一个登陆用户
-#if DEBUG
-            return BLL.TcAdmin.Instance.GetModelList("name='admin'")[0];
-#else
- try
+
+            try
             {
                 if (HttpContext.Current.Session[Session_admin] == null)
                 {
@@ -37,7 +34,6 @@ namespace Tc
                 HttpContext.Current.Response.Redirect("~/admin/login.aspx");
                 return null;
             }
-#endif
         }
     }
 }

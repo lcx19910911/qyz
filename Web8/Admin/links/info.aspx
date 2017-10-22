@@ -73,7 +73,6 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-            alert(11);
             $("#uploadify").uploadify({
                 swf: '../js/uploadfy/uploadify.swf?' + (new Date()).getTime(),
                 uploader: '../handler/tupian.aspx?wh=<%=LibCache.get_theme_config("links_tp_wh")%>',

@@ -1094,7 +1094,7 @@ baidu.sio._removeScriptTag = function(scr){
  * @param {Function|string} opt_callback 数据加载结束时调用的函数或函数名
  * @param {Object} opt_options 其他可选项
  * @config {String} [charset] script的字符集
- * @config {Int} [timeOut] 超时时间，超过这个时间将不再响应本请求，并触发onfailure函数
+ * @config {Integer} [timeOut] 超时时间，超过这个时间将不再响应本请求，并触发onfailure函数
  * @config {Function} [onfailure] timeOut设定后才生效，到达超时时间时触发本函数
  * @remark
  * 1、与callByServer不同，callback参数只支持Function类型，不支持string。
@@ -1151,7 +1151,7 @@ baidu.sio.callByBrowser = function (url, opt_callback, opt_options) {
  * @param {Object} opt_options 加载数据时的选项.
  * @config {string} [charset] script的字符集
  * @config {string} [queryField] 服务器端callback请求字段名，默认为callback
- * @config {Int} [timeOut] 超时时间(单位：ms)，超过这个时间将不再响应本请求，并触发onfailure函数
+ * @config {Integer} [timeOut] 超时时间(单位：ms)，超过这个时间将不再响应本请求，并触发onfailure函数
  * @config {Function} [onfailure] timeOut设定后才生效，到达超时时间时触发本函数
  * @remark
  * 如果url中已经包含key为“options['queryField']”的query项，将会被替换成callback中参数传递或自动生成的函数名。

@@ -2013,8 +2013,8 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
         },
 
         /**
-         * Creates an array containing Int line numbers starting from the 'first-line' param.
-         * @return {Array} Returns array of Ints.
+         * Creates an array containing integer line numbers starting from the 'first-line' param.
+         * @return {Array} Returns array of integers.
          */
         figureOutLineNumbers: function(code)
         {
@@ -2045,7 +2045,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
 
         /**
          * Generates HTML markup for a single line of code while determining alternating line style.
-         * @param {Int} lineNumber	Line number.
+         * @param {Integer} lineNumber	Line number.
          * @param {String} code Line	HTML markup.
          * @return {String}				Returns HTML markup.
          */
@@ -2435,7 +2435,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
         // http://davidchambersdesign.com/
         var keywords   = 'after before beginning continue copy each end every from return get global in local named of set some that the then times to where whose with without';
         var ordinals   = 'first second third fourth fifth sixth seventh eighth ninth tenth last front back middle';
-        var specials   = 'activate add alias AppleScript ask attachment boolean class constant delete duplicate empty exists false id Int list make message modal modified new no paragraph pi properties quit real record remove rest result reveal reverse run running save string true word yes';
+        var specials   = 'activate add alias AppleScript ask attachment boolean class constant delete duplicate empty exists false id integer list make message modal modified new no paragraph pi properties quit real record remove rest result reveal reverse run running save string true word yes';
 
         this.regexList = [
 
@@ -2826,7 +2826,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'case char class comp const constructor currency destructor div do double ' +
 						'downto else end except exports extended false file finalization finally ' +
 						'for function goto if implementation in inherited int64 initialization ' +
-						'Int interface is label library longint longword mod nil not object ' +
+						'integer interface is label library longint longword mod nil not object ' +
 						'of on or packed pansichar pansistring pchar pcurrency pdatetime pextended ' +
 						'pint64 pointer private procedure program property pshortstring pstring ' +
 						'pvariant pwidechar pwidestring protected public published raise real real48 ' +
@@ -3017,7 +3017,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 		// Contributed by Patrick Webster
 		// http://patrickwebster.blogspot.com/2009/04/javafx-brush-for-syntaxhighlighter.html
 		var datatypes =	'Boolean Byte Character Double Duration '
-						+ 'Float Int Long Number Short String Void'
+						+ 'Float Integer Long Number Short String Void'
 						;
 
 		var keywords = 'abstract after and as assert at before bind bound break catch class '
@@ -3194,7 +3194,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'getprotobyname getprotobynumber getrandmax getrusage getservbyname getservbyport gettext '+
 						'gettimeofday gettype glob gmdate gmmktime ini_alter ini_get ini_get_all ini_restore ini_set '+
 						'interface_exists intval ip2long is_a is_array is_bool is_callable is_dir is_double '+
-						'is_executable is_file is_finite is_float is_infinite is_int is_Int is_link is_long '+
+						'is_executable is_file is_finite is_float is_infinite is_int is_integer is_link is_long '+
 						'is_nan is_null is_numeric is_object is_readable is_real is_resource is_scalar is_soap_fault '+
 						'is_string is_subclass_of is_uploaded_file is_writable is_writeable mkdir mktime nl2br '+
 						'parse_ini_file parse_str parse_url passthru pathinfo print readlink realpath rewind rewinddir rmdir '+
@@ -3372,7 +3372,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'self super then throw true undef unless until when while yield';
 
 		var builtins =	'Array Bignum Binding Class Continuation Dir Exception FalseClass File::Stat File Fixnum Fload ' +
-						'Hash Int IO MatchData Method Module NilClass Numeric Object Proc Range Regexp String Struct::TMS Symbol ' +
+						'Hash Integer IO MatchData Method Module NilClass Numeric Object Proc Range Regexp String Struct::TMS Symbol ' +
 						'ThreadGroup Thread Time TrueClass';
 
 		this.regexList = [
@@ -3529,7 +3529,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'dynamic else end end-exec escape except exec execute false fetch first ' +
 						'float for force foreign forward free from full function global goto grant ' +
 						'group grouping having hour ignore index inner insensitive insert instead ' +
-						'int Int intersect into is isolation key last level load local max min ' +
+						'int integer intersect into is isolation key last level load local max min ' +
 						'minute modify move name national nchar next no numeric of off on only ' +
 						'open option order out output partial password precision prepare primary ' +
 						'prior privileges procedure public read real references relative repeatable ' +
@@ -3573,7 +3573,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'Date Decimal Declare Default Delegate Dim DirectCast Do Double Each ' +
 						'Else ElseIf End Enum Erase Error Event Exit False Finally For Friend ' +
 						'Function Get GetType GoSub GoTo Handles If Implements Imports In ' +
-						'Inherits Int Interface Is Let Lib Like Long Loop Me Mod Module ' +
+						'Inherits Integer Interface Is Let Lib Like Long Loop Me Mod Module ' +
 						'MustInherit MustOverride MyBase MyClass Namespace New Next Not Nothing ' +
 						'NotInheritable NotOverridable Object On Option Optional Or OrElse ' +
 						'Overloads Overridable Overrides ParamArray Preserve Private Property ' +

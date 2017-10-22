@@ -3,7 +3,8 @@
 <!--footer start-->
 <div id="footer">
     <div class="inner">
-        <div class='BottomNav'><a href="/">网站首页</a> | <a href="/page/company.aspx">关于我们</a> | <a href="/page/job.aspx">人才招聘</a>  | <a href="/page/contact.aspx">联系我们</a></div>
+        <div class='BottomNav'><a href="/">网站首页</a> | <a href="/p/info.aspx?n=company">关于我们</a> | <a href="/p/info.aspx?n=job">人才招聘</a>  |
+             <a href="/p/info.aspx?n=contact">联系我们</a></div>
         <div class='HeightTab'></div>
         <p>公司地址：<%=PB.Get("dizhi") %> 联系电话：<%=PB.Get("dianhua") %> 电子邮件：<%=PB.Get("email") %></p>
         <p>Copyright 2013  <%=PB.Get("webname") %> 版权所有 All rights reserved</p>

@@ -258,6 +258,34 @@ namespace Maticsoft.DBUtility
 
         #region 执行带参数的SQL语句
 
+        public static object GetScalar(string SQLString, params SqlParameter[] cmdParms)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    try
+                    {
+                        PrepareCommand(cmd, connection, null, SQLString, cmdParms);
+                        object obj = cmd.ExecuteScalar();
+                        cmd.Parameters.Clear();
+                        if ((Object.Equals(obj, null)) || (Object.Equals(obj, System.DBNull.Value)))
+                        {
+                            return null;
+                        }
+                        else
+                        {
+                            return obj;
+                        }
+                    }
+                    catch (OleDbException e)
+                    {
+                        throw e;
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// 执行SQL语句，返回影响的记录数
         /// </summary>
