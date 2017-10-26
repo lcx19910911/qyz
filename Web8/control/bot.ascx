@@ -7,7 +7,7 @@
              <a href="/p/info.aspx?n=contact">联系我们</a></div>
         <div class='HeightTab'></div>
         <p>公司地址：<%=PB.Get("dizhi") %> 联系电话：<%=PB.Get("dianhua") %> 电子邮件：<%=PB.Get("email") %></p>
-        <p>Copyright 2013  <%=PB.Get("webname") %> 版权所有 All rights reserved</p>
+        <p>Copyright 闽ICP备17028220号  <%=PB.Get("webname") %> 版权所有 All rights reserved</p>
     </div>
 </div>
 <!--footer end -->
