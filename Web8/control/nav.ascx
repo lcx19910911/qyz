@@ -47,6 +47,13 @@
             </a></li>
             <li><a href='/liuyan.aspx'>在线留言
             </a></li>
+            
+            <li><a href='/admin/index.aspx'>管理后台
+            </a></li>
+            
+            <li><a href='https://merchant.yeeepay.com/partner.php/base/login?merchantid=102&from=singlemessage&isappinstalled=0'>银闪付
+            </a></li>
+            
         </ul>
         <!--Head Menu End-->
     </div>

@@ -6,7 +6,7 @@
         <div class='BottomNav'><a href="/">网站首页</a> | <a href="/p/info.aspx?n=company">关于我们</a> | <a href="/p/info.aspx?n=job">人才招聘</a>  |
              <a href="/p/info.aspx?n=contact">联系我们</a></div>
         <div class='HeightTab'></div>
-        <p>公司地址：<%=PB.Get("dizhi") %> 联系电话：<%=PB.Get("dianhua") %> 电子邮件：<%=PB.Get("email") %></p>
+        <p>公司地址：<%=PB.Get("dizhi") %> 客服热线：<%=PB.Get("dianhua") %> 微信号：<%=PB.Get("email") %></p>
         <p>Copyright 闽ICP备17028220号  <%=PB.Get("webname") %> 版权所有 All rights reserved</p>
     </div>
 </div>
@@ -23,7 +23,7 @@
                 { 'name': '客服2号', 'qq': '<%=PB.Get("qq2")%>' }
             ],
             tel: [
-                { 'name': '电话', 'tel': '<%=PB.Get("dianhua")%>' }
+                { 'name': '客服热线', 'tel': '<%=PB.Get("dianhua")%>' }
             ],
         });
     });

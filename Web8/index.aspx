@@ -49,9 +49,9 @@
                 <!--left start-->
                 <div class="right">
                     <div class="topic">
-                        <div class="TopicTitle"><a href="/page/company.aspx">关于公司</a></div>
+                        <div class="TopicTitle"><a href="/p/info.aspx?n=company">关于公司</a></div>
                         <div class="TopicMore">
-                            <a href='/page/company.aspx'>
+                            <a href='/p/info.aspx?n=company'>
                                 <img src="<%=Lib.theme %>images/more.png"></a>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                     </div>
                     <div class='txt ColorLink'>
                         <p>
-                            <%=_cm.Content.DeleteHMTL().Subs(90) %><a href='/page/company.aspx' target='_blank'>详细>></a>
+                            <%=_cm.Content.DeleteHMTL().Subs(90) %><a href='/p/info.aspx?n=company' target='_blank'>详细>></a>
                         </p>
                     </div>
                     <div class=" clearfix"></div>
@@ -188,21 +188,21 @@
                 <!--right2 start-->
                 <div class="right2">
                     <div class="topic">
-                        <div class="TopicTitle"><a href='/page/contact.aspx'>联系方式</a></div>
+                        <div class="TopicTitle"><a href='/p/info.aspx?n=contact'>联系方式</a></div>
                         <div class="TopicMore">
-                            <a href='/page/contact.aspx'>
+                            <a href='/p/info.aspx?n=contact'>
                                 <img src="<%=Lib.theme %>images/more.png"></a>
                         </div>
                     </div>
                     <div class='img'>
-                        <a href='/page/contact.aspx' target='_blank'>
+                        <a href='/p/info.aspx?n=contact' target='_blank'>
                             <img src='<%=Lib.theme %>images/join.jpg' width='233' height='100' alt='联系方式'></a>
                     </div>
                     <div class="txt ColorLink">
                         <p>地址：<%=PB.Get("dizhi") %></p>
-                        <p>电话：<%=PB.Get("dianhua") %></p>
-                        <p>传真：<%=PB.Get("chuanzhen") %></p>
-                        <p>邮件：<%=PB.Get("email") %></p>
+                        <p>客服热线：<%=PB.Get("dianhua") %></p>
+                        <p>招商电话：<%=PB.Get("chuanzhen") %></p>
+                        <p>微信号：<%=PB.Get("email") %></p>
                         <p>网址：<a href='<%=PB.Get("web") %>' target='_blank'><%=PB.Get("web") %></a></p>
                         <p align='center'>
                             <a href="http://wpa.qq.com/msgrd?v=3&uin=<%=PB.Get("qq1") %>&site=qq&menu=yes" target="_blank">
