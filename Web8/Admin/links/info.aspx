@@ -7,9 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>友情链接管理</title>
     <link href="../css/base.css" rel="stylesheet" type="text/css">
-    <script src="../js/jquery-1.4.1.min.js"></script>
-    <script src="../js/uploadfy/jquery.uploadify.min.js"></script>
-    <link href="../js/uploadfy/uploadify.css" rel="stylesheet" />
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/file_upload_plug-in.js"></script>
 </head>
 <body background='../images/allbg.gif' leftmargin='8' topmargin='8'>
     <form id="form1" runat="server">
@@ -40,13 +39,18 @@
                                 (由小到大排列)
                             </td>
                         </tr>
+                        
                         <tr>
                             <td height="25">上传Logo：</td>
                             <td>
-                                <input type="file" name="uploadify" id="uploadify" />(88*31 gif或jpg)<span id="fileQueue"></span>
-                                <br />
-                                <img id="img_logo" src="<%=tupianurl %>" style="<%=dp%>" />
-                                <input type="hidden" runat="server" id="hd_tupian" />
+                              <a id="imageFile" style="color:red;">上传图片:</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="25"></td>
+                            <td>
+                                 <img id="img_logo" src="<%=tupianurl %>" style="<%=dp%>" />
+                                <input type="hidden" runat="server" id="hd_tupian" name="images"/>
                             </td>
                         </tr>
                         <tr>
@@ -72,27 +76,37 @@
     </form>
     <script type="text/javascript">
 
-        $(document).ready(function () {
-            $("#uploadify").uploadify({
-                swf: '../js/uploadfy/uploadify.swf?' + (new Date()).getTime(),
-                uploader: '../handler/tupian.aspx?wh=<%=LibCache.get_theme_config("links_tp_wh")%>',
-                queueID: 'fileQueue',
-                auto: true,
-                multi: false,
-                buttonText: '上传图片',
-                removeTimeout: 1,
-                fileTypeExts: "*.jpg;*.gif;*.png;*.jpeg",
-                onUploadSuccess: function (file, data, response) {
+            function UploadImg() {
+            var headimgbtn = $("#imageFile").uploadFile({
+                url: '/admin/handler/tupian.aspx?wh=<%=LibCache.get_theme_config("links_tp_wh")%>',
+                fileSuffixs: ["jpg", "png", "gif"],
+                maximumFilesUpload: 1,//最大文件上传数
+                onComplete: function (data) {
                     var rs = eval("(" + data + ")");
                     if (rs.res == "1") {
                         $("#img_logo").show().attr("src", rs.viewname);
-                        $("#<%=hd_tupian.ClientID%>").val(rs.rukuname);
+                        $("#hd_tupian").val(rs.rukuname);
                     }
                     else {
                         alert("上传失败");
                     }
-                }
+                },
+                onChosen: function (file, obj, fileSize, errorText) {
+                    if (errorText) {
+                      alert(errorText);
+                        return false;
+                    }
+                    //Loading("图片正在上传中...", "请稍等");
+                    uploadheadimg.submitUpload();
+                    return true;//返回false将取消当前选择的文件
+                },
             });
+            var uploadheadimg = headimgbtn.data("uploadFileData");
+        }
+
+
+        $(document).ready(function () {
+            UploadImg()
         });
     </script>
 </body>

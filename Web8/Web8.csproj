@@ -72,6 +72,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\js\file_upload_plug-in.js" />
+    <Content Include="admin\js\jquery-1.10.2.js" />
     <Content Include="admin\liuyan\list.aspx" />
     <Content Include="admin\ad\info.aspx" />
     <Content Include="admin\ad\list.aspx" />
@@ -547,6 +549,7 @@
     <Content Include="control\top.ascx" />
     <Content Include="control\topart.ascx" />
     <Content Include="control\topchanpin.ascx" />
+    <Content Include="handler\tupian.aspx" />
     <Content Include="images\admin\css\base.css" />
     <Content Include="images\admin\css\login.css" />
     <Content Include="images\admin\images\allbtbg.gif" />
@@ -989,6 +992,13 @@
     </Compile>
     <Compile Include="admin\zidian\list.aspx.designer.cs">
       <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\tupian.aspx.cs">
+      <DependentUpon>tupian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="handler\tupian.aspx.designer.cs">
+      <DependentUpon>tupian.aspx</DependentUpon>
     </Compile>
     <Compile Include="images\code.aspx.cs">
       <DependentUpon>code.aspx</DependentUpon>

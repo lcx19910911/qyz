@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>菜单</title>
     <link rel="stylesheet" href="css/base.css" type="text/css" />
-    <script src="js/jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="../js/jquery.min.js"></script>
     <script language='javascript'>var curopenItem = '1';</script>
     <script language="javascript" type="text/javascript" src="js/leftmenu.js"></script>
     <link href="css/menu.css" rel="stylesheet" />

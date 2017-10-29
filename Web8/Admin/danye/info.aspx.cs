@@ -59,7 +59,7 @@ namespace Tc.Web.Admin.danye
             m.Ename = txt_ename.Text.GetString();
             m.Fenlei = ddl_fenlei.SelectedValue.GetInt();
             m.Content = Request.Form["txt_content"].GetString().FilterSql();
-            m.Tupian = this.hd_tupian.Value.GetString();
+            m.Tupian = this.hd_tupian.Value.GetString(); ;
             if (id > 0)
             {
                 bll.Update(m);//更新

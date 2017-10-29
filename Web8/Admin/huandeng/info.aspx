@@ -7,9 +7,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>幻灯片信息</title>
     <link href="../css/base.css" rel="stylesheet" type="text/css" />
-    <script src="../js/jquery-1.4.1.min.js"></script>
-    <script src="../js/uploadfy/jquery.uploadify.min.js"></script>
-    <link href="../js/uploadfy/uploadify.css" rel="stylesheet" />
+<%--    <script src="../js/uploadfy/jquery.uploadify.min.js"></script>
+    <link href="../js/uploadfy/uploadify.css" rel="stylesheet" />--%>
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/file_upload_plug-in.js"></script>
 </head>
 <body topmargin="8">
     <form id="form1" runat="server">
@@ -60,15 +61,26 @@
                     </table>
                 </td>
             </tr>
-            <tr>
+                <tr>
                 <td height="24" colspan="5" class="bline">
                     <table width="800" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td width="90">&nbsp;图片：</td>
+                            <td>
+                               <a id="imageFile" style="color:red;">上传图片:</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="24" colspan="5" class="bline">
+                    <table width="800" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="90"></td>
                             <td width="449">
-                                <input type="file" name="uploadify" id="uploadify" />(建议<%=width %>*<%=height %>)<span id="fileQueue"></span>
                                 <img id="img_logo" src="<%=tupianurl %>" style="<%=dp%>" />
-                                <input type="hidden" runat="server" id="hd_tupian" />
+                                <input type="hidden" runat="server" id="hd_tupian" name="images"/>
                             </td>
                         </tr>
                     </table>
@@ -87,27 +99,37 @@
     </form>
     <script type="text/javascript">
 
-        $(document).ready(function () {
-            $("#uploadify").uploadify({
-                swf: '../js/uploadfy/uploadify.swf',
-                uploader: '../handler/tupian.aspx?wh=<%=width %>,<%=height %>',
-                queueID: 'fileQueue',
-                auto: true,
-                multi: false,
-                buttonText: '上传图片',
-                removeTimeout: 1,
-                fileTypeExts: "*.jpg;*.gif;*.png;*.jpeg",
-                onUploadSuccess: function (file, data, response) {
+        function UploadImg() {
+            var headimgbtn = $("#imageFile").uploadFile({
+                url: '/admin/handler/tupian.aspx?wh=<%=width %>,<%=height %>',
+                fileSuffixs: ["jpg", "png", "gif"],
+                maximumFilesUpload: 1,//最大文件上传数
+                onComplete: function (data) {
                     var rs = eval("(" + data + ")");
                     if (rs.res == "1") {
                         $("#img_logo").show().attr("src", rs.viewname);
-                        $("#<%=hd_tupian.ClientID%>").val(rs.rukuname);
+                        $("#hd_tupian").val(rs.rukuname);
                     }
                     else {
                         alert("上传失败");
                     }
-                }
+                },
+                onChosen: function (file, obj, fileSize, errorText) {
+                    if (errorText) {
+                      alert(errorText);
+                        return false;
+                    }
+                    //Loading("图片正在上传中...", "请稍等");
+                    uploadheadimg.submitUpload();
+                    return true;//返回false将取消当前选择的文件
+                },
             });
+            var uploadheadimg = headimgbtn.data("uploadFileData");
+        }
+
+
+        $(document).ready(function () {
+            UploadImg()
         });
     </script>
 </body>

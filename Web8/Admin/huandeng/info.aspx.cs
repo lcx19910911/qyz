@@ -63,7 +63,7 @@ namespace Tc.Web.Admin.huandeng
             m.Title = txt_title.Text.GetString();
             m.Url = txt_url.Text.GetString();
             m.Paixu = txt_paixu.Text.GetInt();
-            m.Tupian = this.hd_tupian.Value.GetString();
+            m.Tupian = this.hd_tupian.Value.GetString(); ;
             m.Types = types;
             if (id > 0)
             {

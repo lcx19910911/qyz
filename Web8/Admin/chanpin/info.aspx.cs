@@ -41,7 +41,6 @@ namespace Tc.Web.Admin.chanpin
                     {
                         dp = "";
                         tupianurl = LibFile.get_img(f.Tupian.GetString(), "", "");
-                        hd_tupian.Value = f.Tupian.GetString();
                     }
                     var c = BLL.TcChanpin.Instance.GetModelList("articleid=" + f.ID);
                     if (c.Count > 0)

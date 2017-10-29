@@ -15,7 +15,7 @@ namespace Tc.Web.Admin.handler
             if (!IsPostBack)
             {
                 string path = LibFile.rootpath;
-                HttpPostedFile postfile = Request.Files["Filedata"];
+                HttpPostedFile postfile = Request.Files[0];
                 string res = "0";
                 string filename = "";
                 var sj = DateTime.Now.ToString("yyyyMM");
