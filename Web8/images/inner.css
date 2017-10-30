@@ -7,9 +7,10 @@
 #body .inner .left{
 	background:url("left_bg.jpg") repeat-y right top;
 	width:220px;
+    display:none;
 	float:left;}
 #body .inner .right{
-	width:744px;
+	width:100%;
 	float:right;
 	border:1px solid #DDDDDD;
 	padding-bottom:50px;}

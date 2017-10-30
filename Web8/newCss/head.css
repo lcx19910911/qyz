@@ -6,7 +6,7 @@ body {
 	font-size:12px;
 	font-family:"微软雅黑";
 	position:relative;
-	background:url(../Images/000.gif) repeat-x top;
+	background:url(/newsCss/000.gif) repeat-x top;
 }
 li {
 	list-style-type:none;
@@ -108,9 +108,9 @@ img {
 }
 .top_3 ul li {
 	float:left;
-	width:136px;
+	width:210px;
 	font-size:16px;
-	background:url(../Images/top_x.gif) no-repeat top right;
+	background:url(/newsCss/top_x.gif) no-repeat top right;
 }
 .top_3 ul li a {
 	color:#444;
@@ -119,7 +119,7 @@ img {
 	width:100%;
 }
 .main_n {
-	background:url(../Images/000.gif) repeat-x top;
+	background:url(/newsCss/000.gif) repeat-x top;
 }
 .footer {
 	width:100%;
@@ -167,7 +167,7 @@ img {
 	margin-top:30px;
 	margin-right:44px/*****/;
 	border-right:#f4f4f4 solid 1px/******/;
-	background:url(../Images/foot_x.gif) no-repeat top 120px;
+	background:url(/newsCss/foot_x.gif) no-repeat top 120px;
 }
 .ft1 ul li {
 	height:26px;
