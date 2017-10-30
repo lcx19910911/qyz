@@ -1,273 +1,130 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Tc.UI.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Tc.Web.Default" %>
 
-<%@ Register Src="~/control/bot.ascx" TagPrefix="uc1" TagName="bot" %>
-<%@ Register Src="~/control/top.ascx" TagPrefix="uc1" TagName="top" %>
-<%@ Register Src="~/control/nav.ascx" TagPrefix="uc1" TagName="nav" %>
+<%@ Register Src="~/control/botnew.ascx" TagPrefix="uc1" TagName="botnew" %>
+<%@ Register Src="~/control/topnew.ascx" TagPrefix="uc1" TagName="topnew" %>
+<%@ Register Src="~/control/navnew.ascx" TagPrefix="uc1" TagName="navnew" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><%=PB.Get("webname") %></title>
-    <link href="<%=Lib.theme %>images/style.css" rel="stylesheet" type="text/css" />
-    <link href="<%=Lib.theme %>images/common.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="<%=Lib.theme %>js/jquery.min.js"></script>
-    <script type="text/javascript" src="<%=Lib.theme %>js/functions.js"></script>
-    <script type="text/javascript" src="<%=Lib.theme %>js/focusslide.js"></script>
-    <script type="text/javascript" src="<%=Lib.theme %>images/iepng/iepngfix_tilebg.js"></script>
-</head>
+<!-- saved from url=(0023)http://www.shanfu5.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+ 
+ <title><%=PB.Get("webname")%></title>
+ <meta name="keywords" content="<%=PB.Get("webname")%>">
+ <meta name="description" content="<%=PB.Get("webname") %>">
+ <script type="text/javascript" src="./newCss/jquery-1.8.0.min.js"></script></head><body><span style="position: absolute;left: -9999px;"></span>
+ <script type="text/javascript" src="./newCss/jquery.superslide.2.1.1.js"></script><!--**********滚动效果*************-->
+ <link rel="stylesheet" href="./newCss/head.css">
+ <link rel="stylesheet" href="./newCss/index.css">
+ <script type="text/javascript" src="./newCss/gotop.js."></script>
+    <script src="js/focusslide.js"></script>
+<script type="text/javascript">
+function uaredirect(f){try{if(document.getElementById("bdmark")!=null){return}var b=false;if(arguments[1]){var e=window.location.host;var a=window.location.href;if(isSubdomain(arguments[1],e)==1){f=f+"/#m/"+a;b=true}else{if(isSubdomain(arguments[1],e)==2){f=f+"/#m/"+a;b=true}else{f=a;b=false}}}else{b=true}if(b){var c=window.location.hash;if(!c.match("fromapp")){if((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))){location.replace(f)}}}}catch(d){}}function isSubdomain(c,d){this.getdomain=function(f){var e=f.indexOf("://");if(e>0){var h=f.substr(e+3)}else{var h=f}var g=/^www\./;if(g.test(h)){h=h.substr(4)}return h};if(c==d){return 1}else{var c=this.getdomain(c);var b=this.getdomain(d);if(c==b){return 1}else{c=c.replace(".","\\.");var a=new RegExp("\\."+c+"$");if(b.match(a)){return 2}else{return 0}}}};uaredirect("/mobile");	//此处改为你手机版的地址		
+</script>
 
-<body>
-    <div id="wrapper">
 
-        <!--head start-->
-        <div id="head">
-            <uc1:top runat="server" ID="top" />
-            <uc1:nav runat="server" ID="nav" />
-            <!--focus start-->
-            <div id="FocusBG">
-                <div id="Focus">
-                    <ul>
-                        <% var hdp = PB.get_huandong("index");
-                           foreach (var item in hdp)
-                           {%>
-                        <li><a href='<%=item.Url %>' target='_blank'>
-                            <img src='<%=LibFile.get_img(item.Tupian,"","") %>' alt='<%=item.Title %>' /></a></li>
-                        <%}  %>
-                    </ul>
-                </div>
-            </div>
-            <!--foncus end-->
-            <div class="HeightTab clearfix"></div>
-        </div>
-        <!--head end-->
-        <!--body start-->
-        <div id="body">
-            <!--MainBlock start-->
-            <div class="MainBlock">
-                <!--left start-->
-                <div class="right">
-                    <div class="topic">
-                        <div class="TopicTitle"><a href="/p/info.aspx?n=company">关于公司</a></div>
-                        <div class="TopicMore">
-                            <a href='/p/info.aspx?n=company'>
-                                <img src="<%=Lib.theme %>images/more.png"></a>
-                        </div>
-                    </div>
-                    <div class='img'>
-                        <% var _cm = PB.get_danye_model("company"); %>
-                        <img src='<%=LibFile.get_img(_cm.Tupian,"250","100") %>' width='250' height='100' alt='关于公司'>
-                    </div>
-                    <div class='txt ColorLink'>
-                        <p>
-                            <%=_cm.Content.DeleteHMTL().Subs(90) %><a href='/p/info.aspx?n=company' target='_blank'>详细>></a>
-                        </p>
-                    </div>
-                    <div class=" clearfix"></div>
-                </div>
-                <!--left end-->
-                <div class='WidthTab2'></div>
 
-                <!--right start-->
-                <div class="left">
-                    <div class="tab">
-                        <ul class="tab-hd">
-                            <li><a href='/news/list.aspx?c=13'>公司新闻</a></li>
-                            <li><a href='/news/list.aspx?c=14'>行业新闻</a></li>
-                        </ul>
-                        <ul class="tab-bd">
-                            <li>
-                                <div class='DivList'>
-                                    <% var newslist = PB.get_article(9, "types='a' and Fenleiid=13", "id desc");
-                                       foreach (var item in newslist)
-                                       {%>
-                                    <div class='DivLi'><span><%=item.Addtime.GetDateTime().ToString("yyyy-MM-dd") %></span> <a href='/news/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'><%=item.Title.Subs(16) %></a></div>
-                                    <%} %>
-                                    <div class='clearfix'></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='DivList'>
-                                    <% var newslist2 = PB.get_article(9, "types='a' and Fenleiid=14", "id desc");
+     <!--头部-->
+     &#65279;<div class="head">
+         <uc1:topnew runat="server" ID="top" />
+
+         <uc1:navnew runat="server" ID="navnew" />
+     </div>
+
+     <div class="banner-box">
+         <div class="bd">
+             <ul style="position: relative; width: 1903px; height: 603px;">
+                 <% var hdp = PB.get_huandong("index");
+                     var index = 0;
+                     foreach (var item in hdp)
+                     {%>
+                 <li style="position: absolute; width: 1903px; left:<%=(index*1903)+"px"%>; top: 0px;">
+                     <img src='<%=LibFile.get_img(item.Tupian,"","") %>' alt='<%=item.Title %>' /></li>
+                 <%
+                         index++;
+                     }  %>
+             </ul>
+             <div class="banner-btn">
+                 <a class="prev" href="javascript:void(0);">
+                     <img src="./newCss/prev.png"></a>
+                 <a class="next" href="javascript:void(0);" style="">
+                     <img src="./newCss/next.png"></a>
+                 <div class="hd">
+                     <ul style="position: relative; width: 1903px; height: 603px;">
+                         <li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none;" class="on">1</li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+
+         <!--</div>-->
+
+         <script type="text/javascript" src="./newCss/bannerslide.js."></script>
+         <!--************************-->
+         <!--</div>-->
+     </div>
+     <div class="zhonghong">
+    <div class="shiye">
+       <div class="bt">
+        <p class="bt1">News center</p>
+        <p class="bt2">新闻中心</p>
+        <p class="bt3">The pursuit of high efficiency, high satisfaction with the 3Gservice</p>
+      </div>
+       <div class="zhong_bottom">
+        <div class="fangfa">
+           <h2>行业动态</h2><a href="/news/list.aspx?c=14"><img style="margin-top:30px;" src="./newCss/jiangu.gif"></a>
+           <ul>
+
+  <% var newslist2 = PB.get_article(9, "types='a' and Fenleiid=14", "id desc");
                                        foreach (var item in newslist2)
                                        {%>
-                                    <div class='DivLi'><span><%=item.Addtime.GetDateTime().ToString("yyyy-MM-dd") %></span> <a href='/news/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'><%=item.Title.Subs(16) %></a></div>
-                                    <%} %>
-                                    <div class='clearfix'></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--right end-->
-
-                <!--right2 start-->
-                <div class="right2">
-                    <div class="tab">
-                        <ul class="tab-hd">
-                            <li><a href='/Product/list.aspx'>推荐产品</a></li>
-                        </ul>
-                        <ul class="tab-bd">
-                            <li>
-                                <div class='DivList'>
-
-                                    <% var prolist2 = PB.get_article(9, "types='c'", "id desc");
-                                       foreach (var item in prolist2)
+               <li><img src="./newCss/liebiao.jpg"><a href="/news/info.aspx?id=<%=item.ID %>" title="<%=item.Title %>"><%=item.Title %></a></li>
+                                    <%} %></ul>
+         </div>
+        <div class="fangfa">
+           <h2>公司新闻</h2><a href="/news/list.aspx?c=13"><img style="margin-top:30px;" src="./newCss/guancha.gif"></a>
+           <ul>
+     <% var newslist = PB.get_article(9, "types='a' and Fenleiid=13", "id desc");
+                                       foreach (var item in newslist)
                                        {%>
-                                    <div class='DivLi'>· <a href='/product/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'><%=item.Title.Subs(18) %></a></div>
+               <li><img src="./newCss/liebiao.jpg"><a href="/news/info.aspx?id=<%=item.ID %>" title="<%=item.Title %>"><%=item.Title %></a></li>
                                     <%} %>
-                                    <div class='clearfix'></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--right2 end-->
-                <div class="clearfix"></div>
-            </div>
-            <!--MainBlock end-->
+          </ul>
+         </div>
+        <div class="fangfa">
+           <h2>技术支持</h2><a href="/news/list.aspx?c=18"><img style="margin-top:30px;" src="./newCss/jiemi.gif"></a>
+           <ul>
 
-            <div class="HeightTab clearfix"></div>
-            <!--MainBlock2 start-->
-            <div class="MainBlock">
-                <!--left start-->
-                <div class="right">
-                    <div class="topic">
-                        <div class="TopicTitle"><a href='/anli/list.aspx'>案例展示</a></div>
-                        <div class="TopicMore">
-                            <a href='/anli/list.aspx'>
-                                <img src="<%=Lib.theme %>images/more.png"></a>
-                        </div>
-                    </div>
-                    <div class="HeightTab clearfix"></div>
-
-                    <div class="PicBlock">
-
-                        <% var anli = PB.get_article(7, "types='al'", "id desc");
-                           foreach (var item in anli)
-                           {%>
-                        <div class='CasePicBlock'>
-                            <div class='BlockPic'>
-                                <a href='/anli/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'>
-                                    <img alt='<%=item.Title %>' src='<%=LibFile.get_img(item.Tupian,"156","116") %>'></a>
-                            </div>
-                            <div class='BlockTitle'><a href='/anli/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'><%=item.Title.Subs(10) %></a></div>
-                        </div>
-                        <%}  %>
-                        <div class=" clearfix"></div>
-                    </div>
-
-                    <div class=" clearfix"></div>
-                </div>
-                <!--left end-->
-                <div class='WidthTab2'></div>
-
-                <!--right start-->
-                <div class="left">
-                    <div class="tab">
-                        <ul class="tab-hd">
-                            <li><a href='/news/list.aspx?c=18'>技术支持</a></li>
-                        </ul>
-                        <ul class="tab-bd">
-                            <li>
-                                <div class='DivList'>
-                                    <% var newslist3 = PB.get_article(9, "types='a' and Fenleiid=18", "id desc");
+                <% var newslist3 = PB.get_article(9, "types='a' and Fenleiid=18", "id desc");
                                        foreach (var item in newslist3)
                                        {%>
-                                    <div class='DivLi'><span><%=item.Addtime.GetDateTime().ToString("yyyy-MM-dd") %></span> <a href='/news/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'><%=item.Title.Subs(16) %></a></div>
+               <li><img src="./newCss/liebiao.jpg"><a href="/news/info.aspx?id=<%=item.ID %>" title="<%=item.Title %>"><%=item.Title %></a></li>
                                     <%} %>
-                                    <div class='clearfix'></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--right end-->
+          </ul>
+         </div>
+      </div>
 
-                <!--right2 start-->
-                <div class="right2">
-                    <div class="topic">
-                        <div class="TopicTitle"><a href='/p/info.aspx?n=contact'>联系方式</a></div>
-                        <div class="TopicMore">
-                            <a href='/p/info.aspx?n=contact'>
-                                <img src="<%=Lib.theme %>images/more.png"></a>
-                        </div>
-                    </div>
-                    <div class='img'>
-                        <a href='/p/info.aspx?n=contact' target='_blank'>
-                            <img src='<%=Lib.theme %>images/join.jpg' width='233' height='100' alt='联系方式'></a>
-                    </div>
-                    <div class="txt ColorLink">
-                        <p>地址：<%=PB.Get("dizhi") %></p>
-                        <p>客服热线：<%=PB.Get("dianhua") %></p>
-                        <p>招商电话：<%=PB.Get("chuanzhen") %></p>
-                        <p>微信号：<%=PB.Get("email") %></p>
-                        <p>网址：<a href='<%=PB.Get("web") %>' target='_blank'><%=PB.Get("web") %></a></p>
-                        <p align='center'>
-                            <a href="http://wpa.qq.com/msgrd?v=3&uin=<%=PB.Get("qq1") %>&site=qq&menu=yes" target="_blank">
-                                <img src="<%=Lib.theme %>images/qqimg/webqq.gif" alt='在线QQ交谈' /></a> &nbsp;&nbsp;
-              <%--              <a href="http://wpa.qq.com/msgrd?v=3&uin=<%=PB.Get("qq2") %>&site=qq&menu=yes" target="_blank">
-                                <img src="<%=Lib.theme %>images/qqimg/webqq.gif" alt='在线QQ交谈' /></a>--%>
-                        </p>
-                    </div>
 
-                    <div class=" clearfix"></div>
-                </div>
-                <!--right2 end-->
-                <div class="clearfix"></div>
-            </div>
-            <!--MainBlock2 end-->
+    <div class="huoban">
+       <div class="hezuo">
+        <p>合作伙伴</p>
+      </div>
+       <ul>
+        <li><img src="./newCss/zhonghang.gif"></li>
+        <li><img src="./newCss/gongshang.gif"></li>
+        <li><img src="./newCss/guangda.gif"></li>
+        <li><img src="./newCss/xinlang.gif"></li>
+        <li><img src="./newCss/fenghuang.gif"></li>
+        <li><img src="./newCss/21cn.gif"></li>
+        <li><img src="./newCss/jingying.gif"></li>
+        <li><img src="./newCss/jianhang.gif"></li>
+        <li><img src="./newCss/zhaoshang.gif"></li>
+        <li><img src="./newCss/nonghang.gif"></li>
+      </ul>
+     </div>
+  </div>
+ </div>
+<div class="clear"></div>
 
-            <div class="HeightTab clearfix"></div>
+          <uc1:botnew runat="server" ID="bot" />
 
-            <!--ProductShow start-->
-            <div class="ProductShow">
-                <div class="topic">
-                    <div class="TopicTitle">公司产品</div>
-                    <div class="TopicMore">
-                        <a href='/product/list.aspx'>
-                            <img src="<%=Lib.theme %>images/more.png"></a>
-                    </div>
-                </div>
-                <div class="hjnavC">
-                    <div class="hjnavcn">
-                        <div class='hjone'>
-                            <% var prolist = PB.get_article(5, "types='c'", "id desc");
-                               foreach (var item in prolist)
-                               {%>
-                            <div class='albumblock'>
-                                <div class='inner'>
-                                    <a href='/product/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title %>'>
-                                        <img src='<%=LibFile.get_img(item.Tupian.GetString(),"270","270") %>' alt='<%=item.Title %>' /></a><div class='albumtitle'><a href='/product/info.aspx?id=<%=item.ID %>' target='_blank' title='<%=item.Title.Subs(10) %>'><%=item.Title.Subs(10) %></a></div>
-                                </div>
-                            </div>
-                            <%} %>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <script type="text/javascript" src="<%=Lib.theme %>js/h.js"></script>
-            <!--ProductShow end-->
-            <div class="HeightTab clearfix"></div>
-            <!--links start-->
-            <div id="Links">
-                <span>友情链接：</span>
-                <% var linklist = PB.get_links(100, "");
-                   foreach (var item in linklist)
-                   {
-                %>
-                <a href='<%=item.Url %>' target='_blank'><%=item.Name %></a>
-                <%
-                   }
-                %>
-            </div>
-            <!--links end-->
-        </div>
-        <!--body end-->
-
-        <uc1:bot runat="server" ID="bot" />
-    </div>
-</body>
-</html>
+</body></html>

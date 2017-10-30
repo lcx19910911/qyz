@@ -354,10 +354,6 @@
     <Content Include="admin\login.aspx" />
     <Content Include="admin\menu.aspx" />
     <Content Include="admin\images\logo.gif" />
-    <Content Include="admin\ueditor\build\build_editor_css_all.js" />
-    <Content Include="admin\ueditor\build\build_editor_js_all.js" />
-    <Content Include="admin\ueditor\build\js.jar" />
-    <Content Include="admin\ueditor\build\yuicompressor-2.4.6.jar" />
     <Content Include="admin\ueditor\CHANGELOG.TXT" />
     <Content Include="admin\ueditor\dialogs\anchor\anchor.html" />
     <Content Include="admin\ueditor\dialogs\attachment\attachment.css" />
@@ -541,15 +537,19 @@
     <Content Include="control\about.ascx" />
     <Content Include="control\ad.ascx" />
     <Content Include="control\bot.ascx" />
+    <Content Include="control\botnew.ascx" />
     <Content Include="control\cateart.ascx" />
     <Content Include="control\catechanpin.ascx" />
     <Content Include="control\contact.ascx" />
     <Content Include="control\left.ascx" />
+    <Content Include="control\navnew.ascx" />
     <Content Include="control\nav.ascx" />
+    <Content Include="control\topnew.ascx" />
     <Content Include="control\top.ascx" />
     <Content Include="control\topart.ascx" />
     <Content Include="control\topchanpin.ascx" />
-    <Content Include="handler\tupian.aspx" />
+    <Content Include="images\weixin.png" />
+    <Content Include="Index.aspx" />
     <Content Include="images\admin\css\base.css" />
     <Content Include="images\admin\css\login.css" />
     <Content Include="images\admin\images\allbtbg.gif" />
@@ -604,7 +604,6 @@
     <Content Include="images\top_bg1.jpg" />
     <Content Include="images\top_bg2.gif" />
     <Content Include="images\xml_icon.gif" />
-    <Content Include="index.aspx" />
     <Content Include="js\artDialog4.1.7\artDialog.js" />
     <Content Include="js\artDialog4.1.7\artDialog.source.js" />
     <Content Include="js\artDialog4.1.7\index.html" />
@@ -733,6 +732,7 @@
     <Content Include="js\lrkf\skin\lrkf_yellow1\ico.gif" />
     <Content Include="links.aspx" />
     <Content Include="liuyan.aspx" />
+    <Content Include="newCss\weixin.jpg" />
     <Content Include="news\info.aspx" />
     <Content Include="news\list.aspx" />
     <Content Include="product\info.aspx" />
@@ -815,6 +815,27 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="newCss\21cn.gif" />
+    <Content Include="newCss\banner1.jpg" />
+    <Content Include="newCss\fenghuang.gif" />
+    <Content Include="newCss\gongshang.gif" />
+    <Content Include="newCss\guancha.gif" />
+    <Content Include="newCss\guangda.gif" />
+    <Content Include="newCss\head.css" />
+    <Content Include="newCss\index.css" />
+    <Content Include="newCss\jiangu.gif" />
+    <Content Include="newCss\jianhang.gif" />
+    <Content Include="newCss\jiemi.gif" />
+    <Content Include="newCss\jingying.gif" />
+    <Content Include="newCss\liebiao.jpg" />
+    <Content Include="newCss\logo.png" />
+    <Content Include="newCss\next.png" />
+    <Content Include="newCss\nonghang.gif" />
+    <Content Include="newCss\prev.png" />
+    <Content Include="newCss\tel.gif" />
+    <Content Include="newCss\xinlang.gif" />
+    <Content Include="newCss\zhaoshang.gif" />
+    <Content Include="newCss\zhonghang.gif" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\ad\info.aspx.cs">
@@ -993,12 +1014,12 @@
     <Compile Include="admin\zidian\list.aspx.designer.cs">
       <DependentUpon>list.aspx</DependentUpon>
     </Compile>
-    <Compile Include="handler\tupian.aspx.cs">
-      <DependentUpon>tupian.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="handler\tupian.aspx.designer.cs">
-      <DependentUpon>tupian.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="images\code.aspx.cs">
       <DependentUpon>code.aspx</DependentUpon>
@@ -1071,10 +1092,10 @@
     <Content Include="admin\images\style4\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="admin\ueditor\build\" />
     <Folder Include="admin\ueditor\net\upload\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin\ueditor\build\merge.bat" />
     <Content Include="admin\ueditor\net\fileUp.ashx" />
     <Content Include="admin\ueditor\net\getContent.ashx" />
     <Content Include="admin\ueditor\net\getMovie.ashx" />
@@ -1090,6 +1111,10 @@
     <Content Include="bin.rar" />
     <None Include="Properties\PublishProfiles\fb.pubxml" />
     <None Include="Properties\PublishProfiles\gs.pubxml" />
+    <Content Include="newCss\bannerslide.js" />
+    <Content Include="newCss\gotop.js" />
+    <Content Include="newCss\jquery-1.8.0.min.js" />
+    <Content Include="newCss\jquery.superslide.2.1.1.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
