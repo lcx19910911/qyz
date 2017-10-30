@@ -17,6 +17,6 @@
   <div class="con">
     <div class="top_2">
       <div style="float:left;"><img src="<%=Lib.theme %>images/logo.png" alt="银闪付官网" border="0"></div>
-      <div style="float:right; line-height:100px;font-size:20px;" >24小时客服热线:<p style="color:red;float:right; "><%=PB.Get("dianhua") %></p></div>
+      <div style="float:right; line-height:100px;font-size:20px;" >客服热线:<p style="color:red;float:right; "><%=PB.Get("dianhua") %></p></div>
     </div>
   </div>

@@ -2,7 +2,7 @@
 <div class="Sbox">
     <div class="topic">联系我们&nbsp;&nbsp;&nbsp;Contact</div>
     <div class="txt ColorLink">
-<%--        <p>地址：<%=PB.Get("dizhi") %></p>--%>
+        <p>地址：<%=PB.Get("dizhi") %></p>
         <p>客服热线：<%=PB.Get("dianhua") %></p>
         <p>招商电话：<%=PB.Get("chuanzhen") %></p>
         <p>微信号：<%=PB.Get("email") %></p>

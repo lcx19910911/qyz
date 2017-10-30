@@ -39,7 +39,7 @@
       </div> 
       <!-- <style>.nnnn31,.nnnn32,.nnnn33{ display:none}</style>-->
       
-      <div class="ewm"> <img style="float:left; padding-right:8px;width:100px;" src="./newCss/weixin.png" alt="联系微信" border="0">
+      <div class="ewm"> <img style="float:left; padding-right:8px;width:100px;" src="./newCss/weixin.jpg" alt="联系微信" border="0">
         <p> </p>
         <a style="color:#333;">扫描关注</a>
 

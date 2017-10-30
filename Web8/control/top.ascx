@@ -10,7 +10,7 @@
                 <img src="<%=Lib.theme %>images/logo.png"></a>
         </div>
         <div class="tel">
-            <p class="telW">24小时客服热线</p>
+            <p class="telW">客服热线</p>
             <p class="telN"><%=PB.Get("dianhua") %></p>
         </div>
     </div>
