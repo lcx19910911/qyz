@@ -33,15 +33,18 @@
         <ul>
           <dt class="ft_bt"><a href="/p/info.aspx?n=contact">联系我们</a></dt>
           
+
         </ul>
       </div> 
       <!-- <style>.nnnn31,.nnnn32,.nnnn33{ display:none}</style>-->
       
       <div class="ewm"> <img style="float:left; padding-right:8px;width:100px;" src="/newCss/weixin.jpg" alt="联系微信" border="0">
-        <p> </p>
-        <a style="color:#333;">扫描关注</a>
-
-		<div style=" margin-top:10px;">扫一扫加微信</div>
+        <p> </p>  
+		<div style=" margin-top:10px;">扫</div>
+		<div style="">一</div>
+		<div style="">扫</div>
+		<div style="">关</div>
+		<div style="">注</div>
       </div>
     </div>
   </div>
