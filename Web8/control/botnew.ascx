@@ -5,9 +5,7 @@
     <div class="ft_a"> <div class="ft1">
         <ul>
           
-          <dt class="ft_bt"><a href="/p/info.aspx?n=huanjing">公司环境</a></dt>
-          
-          <li class="nnnn5"><a href="/p/info.aspx?n=huanjing">公司环境</a></li>        
+          <dt class="ft_bt"><a href="#">网站首页</a></dt>
           
         </ul>
       </div><div class="ft1">
@@ -27,7 +25,7 @@
         </ul>
       </div><div class="ft1">
         <ul>
-          <dt class="ft_bt"><a href="/anli/list.aspx">案例展示</a></dt>
+          <dt class="ft_bt"><a href="https://merchant.yeeepay.com/partner.php/base/login?merchantid=102">代理后台</a></dt>
           
         </ul>
 		
@@ -40,7 +38,7 @@
       </div> 
       <!-- <style>.nnnn31,.nnnn32,.nnnn33{ display:none}</style>-->
       
-      <div class="ewm"> <img style="float:left; padding-right:8px;width:100px;" src="./newCss/weixin.jpg" alt="联系微信" border="0">
+      <div class="ewm"> <img style="float:left; padding-right:8px;width:100px;" src="/newCss/weixin.jpg" alt="联系微信" border="0">
         <p> </p>
       <%--  <a style="color:#333;">扫描关注</a>--%>
 

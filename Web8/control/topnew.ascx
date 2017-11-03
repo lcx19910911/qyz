@@ -7,9 +7,9 @@
       <div class="fl_jl">欢迎您访问银闪付官方网站</div>
       <div class="fr_jl">
         <ul>
-          <li style="background:url(/skins/C89/Images/home.gif) no-repeat left 15px; color:#FFF;"><a href="/#">设为首页</a></li>
-          <li style="background:url(/skins/C89/Images/shoucang.gif) no-repeat left 15px;"><a href="javascript:window.external.AddFavorite('http://yinshanfupya.com ','银闪付官网')">加入收藏</a></li>  
-          <li style="background:url(/skins/C89/Images/women.gif) no-repeat left 15px;"><a href="/p/info.aspx?n=contact">联系我们</a></li>
+          <li style="background:url(/newCss/home.gif) no-repeat left 15px; color:#FFF;"><a href="/#">设为首页</a></li>
+          <li style="background:url(/newCss/shoucang.gif) no-repeat left 15px;"><a href="javascript:window.external.AddFavorite('http://yinshanfupya.com ','银闪付官网')">加入收藏</a></li>  
+          <li style="background:url(/newCss/women.gif) no-repeat left 15px;"><a href="/p/info.aspx?n=contact">联系我们</a></li>
         </ul>
       </div>
     </div>

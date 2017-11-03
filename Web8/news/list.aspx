@@ -1,86 +1,114 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" Inherits="Tc.UI.ArtList" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="Tc.UI.ArtList" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
-<%@ Register Src="~/control/bot.ascx" TagPrefix="uc1" TagName="bot" %>
-<%@ Register Src="~/control/ad.ascx" TagPrefix="uc1" TagName="ad" %>
+<%@ Register Src="~/control/botnew.ascx" TagPrefix="uc1" TagName="botnew" %>
 <%@ Register Src="~/control/top.ascx" TagPrefix="uc1" TagName="top" %>
 <%@ Register Src="~/control/nav.ascx" TagPrefix="uc1" TagName="nav" %>
-<%@ Register Src="~/control/cateart.ascx" TagPrefix="uc1" TagName="cateart" %>
-<%@ Register Src="~/control/contact.ascx" TagPrefix="uc1" TagName="contact" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Êñ∞ÈóªÂä®ÊÄÅ-<%=PB.Get("webname") %></title>
-    <link href="<%=Lib.theme %>images/inner.css" rel="stylesheet" type="text/css" />
-    <link href="<%=Lib.theme %>images/common.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="<%=Lib.theme %>js/jquery.min.js"></script>
-    <script type="text/javascript" src="<%=Lib.theme %>js/functions.js"></script>
-    <script type="text/javascript" src="<%=Lib.theme %>images/iepng/iepngfix_tilebg.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>–¬Œ≈÷––ƒ_<%=PB.Get("webname")%></title>
+    <meta name="keywords" content="–¬Œ≈÷––ƒ" />
+    <meta name="description" content="–¬Œ≈÷––ƒ" />
+    <link rel="stylesheet" href="/newCss/head.css" />
+    <link rel="stylesheet" href="/newCss/style.css">
+    <script type="text/javascript" src="/newCss/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="/newCss/jquery.jslides.js"></script>
+    <!---->
+    <script type="text/javascript" src="/newCss/newsscroll.js"></script>
+    <!---->
+    <script type="text/javascript" src="/newCss/gotop.js"></script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <!--head start-->
-        <div id="head">
-            <uc1:top runat="server" ID="top" />
-            <uc1:nav runat="server" ID="nav" />
-        </div>
-        <!--head end-->
-        <!--body start-->
-        <div id="body">
-            <!--focus start-->
-            <div id="InnerBanner">
-            </div>
-            <!--foncus end-->
-            <div class="HeightTab clearfix"></div>
-            <!--inner start -->
-            <div class="inner">
-                <!--left start-->
-                <div class="left">
-                    <uc1:cateart runat="server" ID="cateart" />
-                    <uc1:contact runat="server" ID="contact" />
+    <!--Õ∑≤ø-->
+    &#65279;<div class="head">
+        <uc1:top runat="server" ID="top" />
+
+
+        <uc1:nav runat="server" ID="nav" />
+    </div>
+
+    <div class="banner_n" style="background: url(/newCss/xinwen.gif) repeat center center;"></div>
+    <!--------÷˜ÃÂ--------->
+    <div class="main_n">
+        <div class="left fl">
+            <div class="box">
+                <div class="column">
+                    <div class="title">
+                        <h2>Õ¯’æµº∫Ω</h2>
+                        <p>Navigation </p>
+                    </div>
+                    <ul>
+
+                        <% var t_ncate = LibCache.get_fenleis("a");
+                            foreach (var item in t_ncate)
+                            {
+                        %>
+                        <li><a href='/news/list.aspx?c=<%=item.ID %>'><%=item.Name %></a></li>
+                        <%  } %>
+                    </ul>
                 </div>
-                <!--left end-->
-                <!--right start-->
-                <div class="right">
-                    <div class="Position"><span>‰Ω†ÁöÑ‰ΩçÁΩÆÔºö<a href="/">È¶ñÈ°µ</a> > <a href='/news/list.aspx'>Êñ∞ÈóªÂä®ÊÄÅ</a></span></div>
-                    <div class="HeightTab clearfix"></div>
-                    <!--main start-->
-                    <div class="main">
-                        <div class="ArticleList">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <ul>
-                                    <% foreach (System.Data.DataRow item in dt.Rows)
-                                       {%>
-                                    <tr>
-                                        <td width='90%' class='fw_t'>¬∑<a href='/news/info.aspx?id=<%=item["id"] %>' target='_blank'><%=item["title"].GetString() %></a></td>
-                                        <td width='10%' class='fw_s'>[<%=item["addtime"].GetString().GetDateTime().ToString("yyyy-MM-dd") %>]</td>
-                                    </tr>
-                                    <%} %>
-                                </ul>
-                            </table>
-                            <div class="clearfix"></div>
-                            <div class='t_page ColorLink'>
-                                <webdiyer:AspNetPager ID="aspnetpage" runat="server" FirstPageText="È¶ñÈ°µ" LastPageText="Â∞æÈ°µ"
-                                    NextPageText="‰∏ã‰∏ÄÈ°µ" PrevPageText="‰∏ä‰∏ÄÈ°µ" OnPageChanged="aspnetpage_PageChanged"
+                <div class="link">
+                    <ul>
+                        <li class="cp"><a href="/p/info.aspx?n=product">≤˙∆∑ΩÈ…‹</a></li>
+
+
+                        <li class="wd"><a href="/p/info.aspx?n=contact">¡™œµŒ“√«</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="right fr">
+            <div class="r_top">
+                <div class="fl"><span class="title">–¬Œ≈÷––ƒ</span> </div>
+                <div class="dh duyier">ƒ˙µ±«∞À˘‘⁄Œª÷√£∫<a href='/'>Õ¯’æ ◊“≥</a>   > <a href="/news/list.aspx">–¬Œ≈÷––ƒ</a> </div>
+            </div>
+            <div class="news">
+                <ul>
+
+                    <% foreach (System.Data.DataRow item in dt.Rows)
+                        {%>
+                    <li>
+                        <div class="lf fl">
+                            <h2><%=item["addtime"].GetString().GetDateTime().ToString("MM") %></h2>
+                            <h3><%=item["addtime"].GetString().GetDateTime().ToString("yyyy") %></h3>
+
+                        </div>
+                        <div class="txt fr">
+                            <div class="title">
+                                <a href="/news/info.aspx?id=<%=item["id"] %>" title="<%=item["title"].GetString() %>"><%=item["title"].GetString() %></a>
+                            </div>
+                            <p>
+                                <a href="/news/info.aspx?id=<%=item["id"] %>" title="<%=item["title"].GetString() %>"><%=item["title"].GetString() %></a>
+
+                            </p>
+
+                        </div>
+
+                    </li>
+
+                    <%} %>
+                </ul>
+                 <div class='t_page paging'>
+                                <webdiyer:AspNetPager ID="aspnetpage" runat="server" FirstPageText=" ◊“≥" LastPageText="Œ≤“≥"
+                                    NextPageText="œ¬“ª“≥" PrevPageText="…œ“ª“≥" OnPageChanged="aspnetpage_PageChanged"
                                     HorizontalAlign="Center" UrlPaging="true" AlwaysShow="true"
                                     ShowMoreButtons="False" ShowPageIndexBox="Never" NumericButtonCount="5" ShowDisabledButtons="False" PageSize="10">
                                 </webdiyer:AspNetPager>
                             </div>
-                        </div>
-                    </div>
-                    <!--main end-->
-                </div>
-                <!--right end-->
-            </div>
-            <!--inner end-->
-        </div>
-        <!--body end-->
 
-        <uc1:bot runat="server" ID="bot" />
+                <%--<div class="paging"><a>◊‹ ˝£∫<%=dt.Rows.Count %></a><span>1</span><a href="Index_2.html">2</a><a href="Index_3.html">3</a><a href="Index_2.html">œ¬“ª“≥</a><a>“≥¥Œ£∫1/3</a> </div>--%>
+            </div>
+
+        </div>
     </div>
+    <div class="clear"></div>
+
+    <uc1:botnew runat="server" ID="bot" />
 </body>
 </html>

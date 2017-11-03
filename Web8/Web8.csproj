@@ -549,6 +549,20 @@
     <Content Include="control\topart.ascx" />
     <Content Include="control\topchanpin.ascx" />
     <Content Include="images\weixin.png" />
+    <Content Include="newCss\column_bg.gif" />
+    <Content Include="newCss\home_n.gif" />
+    <Content Include="newCss\jquery.jslides.js" />
+    <Content Include="newCss\list.gif" />
+    <Content Include="newCss\list_hover.gif" />
+    <Content Include="newCss\newsscroll.js" />
+    <Content Include="newCss\pro_links.gif" />
+    <Content Include="newCss\renli.gif" />
+    <Content Include="newCss\shoucang.gif" />
+    <Content Include="newCss\style.css" />
+    <Content Include="newCss\top_x.gif" />
+    <Content Include="newCss\wd.gif" />
+    <Content Include="newCss\xinwen.gif" />
+    <Content Include="ShanFu5Index.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="images\admin\css\base.css" />
     <Content Include="images\admin\css\login.css" />
@@ -738,6 +752,36 @@
     <Content Include="product\info.aspx" />
     <Content Include="product\list.aspx" />
     <Content Include="p\info.aspx" />
+    <Content Include="shanfu5\1.jpg" />
+    <Content Include="shanfu5\11.jpg" />
+    <Content Include="shanfu5\22.jpg" />
+    <Content Include="shanfu5\7.jpg" />
+    <Content Include="shanfu5\app.png" />
+    <Content Include="shanfu5\banner1_01.jpg" />
+    <Content Include="shanfu5\banner_text.png" />
+    <Content Include="shanfu5\call.png" />
+    <Content Include="shanfu5\code.png" />
+    <Content Include="shanfu5\dot.png" />
+    <Content Include="shanfu5\down.png" />
+    <Content Include="shanfu5\jquery-1.8.2.js" />
+    <Content Include="shanfu5\jquery.easing.min.js" />
+    <Content Include="shanfu5\jquery.fullpage.css" />
+    <Content Include="shanfu5\jquery.fullpage.min.js" />
+    <Content Include="shanfu5\jquery.multiscroll.css" />
+    <Content Include="shanfu5\left_control.png" />
+    <Content Include="shanfu5\logo.png" />
+    <Content Include="shanfu5\logo2.png" />
+    <Content Include="shanfu5\overlay-figure.js" />
+    <Content Include="shanfu5\phone.png" />
+    <Content Include="shanfu5\right_control-on.png" />
+    <Content Include="shanfu5\right_control.png" />
+    <Content Include="shanfu5\scroll.js" />
+    <Content Include="shanfu5\send.jpg" />
+    <Content Include="shanfu5\slider.js" />
+    <Content Include="shanfu5\slider.style.css" />
+    <Content Include="shanfu5\style.css" />
+    <Content Include="shanfu5\weixin.png" />
+    <Content Include="shanfu5\xin.png" />
     <Content Include="update.aspx" />
     <Content Include="upload\2013-08-11\09b2f4c0-920b-414a-b9a5-a55a9dc94f90.jpg" />
     <Content Include="upload\2013-08-11\17707b6a-973c-4026-a8bd-5ce844cc0fb8.jpg" />
@@ -1013,6 +1057,13 @@
     </Compile>
     <Compile Include="admin\zidian\list.aspx.designer.cs">
       <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShanFu5Index.aspx.cs">
+      <DependentUpon>ShanFu5Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShanFu5Index.aspx.designer.cs">
+      <DependentUpon>ShanFu5Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
